@@ -26,7 +26,7 @@ plot_function()
 start_button()
 
 # Gets called when the start button is clicked to get the users input
-start_button_clicked
+start_button_clicked()
 ```
 
 Please open the Python scripts and read the functions' docstrings for further understanding.
