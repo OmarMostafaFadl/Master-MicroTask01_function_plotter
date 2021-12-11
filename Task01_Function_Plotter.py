@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QApplication, QMainWindow, QInputDialog, QWidget, QPushButton, QMessageBox
+from PyQt5.QtWidgets import QApplication, QLabel, QMainWindow, QInputDialog, QLineEdit, QPushButton, QMessageBox
 from PyQt5.QtCore import pyqtSlot
 
 class UsersFunction():
@@ -58,6 +58,7 @@ class UsersFunction():
         """
 
         plt.plot(x_iters, y_results, 'b')
+        plt.title("Graph Plot")
         plt.show()
 
 
@@ -80,18 +81,18 @@ class MyWindow(QMainWindow, UsersFunction):                  #Inherites everythi
     def initUI(self):
 
         """This Function initilizes the UI
-        """
+        """   
+        
 
         self.start_button()
         
-
     def start_button(self):
 
         """This function add a Start button to the GUI and calls another function whenever
         this button is clicked
         """
 
-        button = QPushButton('Press me to Start', self)
+        button = QPushButton('Start', self)
         button.setToolTip('Press this button to add a function to plot')
         button.move(100,70)
         button.resize(200, 200)
